@@ -15,6 +15,7 @@ namespace VDemyanov.WinFormsLab1.WinForms
     {
         private Calculator calculator;
         private Dictionary<string, bool> buttonsStates;
+        private bool MRC_counter = true;
         public FormCalculator()
         {
             InitializeComponent();
@@ -30,7 +31,12 @@ namespace VDemyanov.WinFormsLab1.WinForms
                 { buttonSin.ToString(), true },
                 { buttonCos.ToString(), true },
                 { buttonTg.ToString(), true },
-                { buttonCtg.ToString(), true }
+                { buttonCtg.ToString(), true },
+                // операции со степенью
+                { buttonSqrtX.ToString(), true },
+                { buttonSqrt.ToString(), true },
+                { buttonDegreeX.ToString(), true },
+                { buttonSq.ToString(), true }
             };
             Display.Text = "0";
         }
@@ -58,6 +64,15 @@ namespace VDemyanov.WinFormsLab1.WinForms
                 return false;
             else if (!buttonsStates[buttonCtg.ToString()])
                 return false;
+            // операции со степенью
+            else if (!buttonsStates[buttonSqrtX.ToString()])
+                return false;
+            else if (!buttonsStates[buttonSqrt.ToString()])
+                return false;
+            else if (!buttonsStates[buttonDegreeX.ToString()])
+                return false;
+            else if (!buttonsStates[buttonSq.ToString()])
+                return false;
             return true;
         }
 
@@ -76,6 +91,11 @@ namespace VDemyanov.WinFormsLab1.WinForms
             buttonsStates[buttonCos.ToString()] = true;
             buttonsStates[buttonTg.ToString()] = true;
             buttonsStates[buttonCtg.ToString()] = true;
+            // операции со степенью
+            buttonsStates[buttonSqrtX.ToString()] = true;
+            buttonsStates[buttonSqrt.ToString()] = true;
+            buttonsStates[buttonDegreeX.ToString()] = true;
+            buttonsStates[buttonSq.ToString()] = true;
         }
 
         /// <summary>
@@ -299,7 +319,12 @@ namespace VDemyanov.WinFormsLab1.WinForms
         /// </summary>        
         private void ButtonSqrtX_Click(object sender, EventArgs e)
         {
-
+            if (CheckButtons())
+            {
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                buttonsStates[buttonSqrtX.ToString()] = false;
+                Display.Text = "0";
+            }
         }
 
         /// <summary>
@@ -307,7 +332,21 @@ namespace VDemyanov.WinFormsLab1.WinForms
         /// </summary>        
         private void ButtonSqrt_Click(object sender, EventArgs e)
         {
-
+            if (CheckButtons())
+            {
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                Display.Text = calculator.Calc_sqrt(Convert.ToDouble(Display.Text)).ToString();
+                FreeButtons();
+                calculator.ClearResult();
+            }
+            else
+            {
+                Display.Text = calculator.Calc_sqrt(Convert.ToDouble(Display.Text)).ToString();
+                ButtonCalculate_Click(null, null);
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                FreeButtons();
+                calculator.ClearResult();
+            }
         }
 
         /// <summary>
@@ -315,7 +354,12 @@ namespace VDemyanov.WinFormsLab1.WinForms
         /// </summary>        
         private void ButtonDegreeX_Click(object sender, EventArgs e)
         {
-
+            if (CheckButtons())
+            {
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                buttonsStates[buttonDegreeX.ToString()] = false;
+                Display.Text = "0";
+            }
         }
 
         /// <summary>
@@ -323,7 +367,62 @@ namespace VDemyanov.WinFormsLab1.WinForms
         /// </summary>        
         private void ButtonSq_Click(object sender, EventArgs e)
         {
+            if (CheckButtons())
+            {
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                Display.Text = calculator.Calc_sq(Convert.ToDouble(Display.Text)).ToString();
+                FreeButtons();
+                calculator.ClearResult();
+            }
+            else
+            {
+                Display.Text = calculator.Calc_sq(Convert.ToDouble(Display.Text)).ToString();
+                ButtonCalculate_Click(null, null);
+                calculator.PushX(Convert.ToDouble(Display.Text));
+                FreeButtons();
+                calculator.ClearResult();
+            }
+        }
 
+        /*
+         * Операции хранения
+         */
+
+        /// <summary>
+        /// Добавить к хранилищу
+        /// </summary>        
+        private void buttonMPlus_Click(object sender, EventArgs e)
+        {
+            calculator.Memory_plus(Convert.ToDouble(Display.Text));
+        }
+
+        /// <summary>
+        /// Вычесть из хранилища
+        /// </summary>        
+        private void buttonMMinus_Click(object sender, EventArgs e)
+        {
+            calculator.Memory_minus(Convert.ToDouble(Display.Text));
+        }
+
+        /// <summary>
+        /// (Вывести / Очистить) хранилище
+        /// </summary>
+        private void buttonMRC_Click(object sender, EventArgs e)
+        {
+            if (MRC_counter)
+            {
+                if (Display.Text == "0")
+                    Display.Text = calculator.Show_MRC().ToString();
+                else
+                    Display.Text += calculator.Show_MRC();
+                MRC_counter = false;
+            }
+            else
+            {
+                calculator.Clear_MRC();
+                MRC_counter = true;
+            }
+            
         }
 
         /// <summary>
@@ -365,6 +464,24 @@ namespace VDemyanov.WinFormsLab1.WinForms
             {
                 Display.Text = calculator.Calc_ctg(Convert.ToDouble(Display.Text)).ToString();
             }
+            // операции со степенью
+            else if (!buttonsStates[buttonSqrtX.ToString()])
+            {
+                Display.Text = calculator.Calc_sqrtX(Convert.ToDouble(Display.Text)).ToString();
+            }                 
+            else if (!buttonsStates[buttonDegreeX.ToString()])
+            {
+                Display.Text = calculator.Calc_degreeX(Convert.ToDouble(Display.Text)).ToString();
+            }
+            else if (!buttonsStates[buttonSqrt.ToString()])
+            {
+                Display.Text = calculator.Calc_sqrt(Convert.ToDouble(Display.Text)).ToString();
+            }
+            else if (!buttonsStates[buttonSq.ToString()])
+            {
+                Display.Text = calculator.Calc_sq(Convert.ToDouble(Display.Text)).ToString();
+            }
+
             calculator.ClearResult();
             FreeButtons();
         }

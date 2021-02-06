@@ -6,7 +6,7 @@ namespace VDemyanov.WinFormsLab1.Domain
 {
     public class Calculator : ICalculator
     {
-        public double Memory { get; }
+        private double memory;
         private double result;
 
         private double DegreesToRadians(double degrees)
@@ -59,19 +59,19 @@ namespace VDemyanov.WinFormsLab1.Domain
             return Math.Pow(result, 1 / x);
         }
 
-        public double Calc_sqrt()
+        public double Calc_sqrt(double x)
         {
-            return Math.Sqrt(result);
+            return Math.Sqrt(x);
         }
 
-        public double Calc_DegreeX(double x)
+        public double Calc_degreeX(double x)
         {
             return Math.Pow(result, x);
         }
 
-        public double Calc_sq()
+        public double Calc_sq(double x)
         {
-            return Math.Pow(result, 2);
+            return Math.Pow(x, 2);
         }
 
         public void PushX(double x)
@@ -86,12 +86,22 @@ namespace VDemyanov.WinFormsLab1.Domain
 
         public double Show_MRC()
         {
-            throw new NotImplementedException();
+            return memory;
         }
 
         public void Clear_MRC()
         {
-            throw new NotImplementedException();
+            memory = 0;
+        }
+
+        public void Memory_plus(double x)
+        {
+            memory += x;
+        }
+
+        public void Memory_minus(double x)
+        {
+            memory -= x;
         }
     }
 }

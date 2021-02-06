@@ -18,13 +18,16 @@ namespace VDemyanov.WinFormsLab1.Domain
         double Calc_div(double x);
         //  степенные операции
         double Calc_sqrtX(double x);      // извлечение корня степени x
-        double Calc_sqrt();               // извлечение квадратного корня
-        double Calc_DegreeX(double x);    // возведение в степень x
-        double Calc_sq();                 // возведение в квадрат
+        double Calc_sqrt(double x);       // извлечение квадратного корня
+        double Calc_degreeX(double x);    // возведение в степень x
+        double Calc_sq(double x);         // возведение в квадрат
         //  дополнительные операции
         void PushX(double x);
         void ClearResult();
+        //  операции хранения
         double Show_MRC();
         void Clear_MRC();
+        void Memory_plus(double x);
+        void Memory_minus(double x);
     }
 }
