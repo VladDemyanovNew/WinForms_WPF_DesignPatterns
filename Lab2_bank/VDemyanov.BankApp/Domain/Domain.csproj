@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>VDemyanov.BankApp.Domain</AssemblyName>
+    <RootNamespace>VDemyanov.BankApp.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>
