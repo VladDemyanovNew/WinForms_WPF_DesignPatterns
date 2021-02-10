@@ -21,7 +21,7 @@ namespace VDemyanov.WinFormsLab1.WinForms
             InitializeComponent();
             calculator = new Calculator();
             buttonsStates = new Dictionary<string, bool>()
-            {
+            {                
                 // + - * /
                 { buttonSub.ToString(), true },
                 { buttonSum.ToString(), true },
