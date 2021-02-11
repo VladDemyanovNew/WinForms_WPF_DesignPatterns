@@ -7,13 +7,13 @@ namespace VDemyanov.BankApp.Domain
 {
     public class Account
     {
-        Owner owner;
-        private string accountNumber;
-        private string accountType;
-        private decimal balance;
-        private DateTime openingDate;
-        private bool InternetBanking;
-        private bool SMS_alert;
+        public Owner owner;
+        public string AccountNumber { get; }
+        public string AccountType { get; }
+        public decimal Balance { get; }
+        public DateTime OpeningDate { get; }
+        public bool InternetBanking { get; }
+        public bool SMS_alert { get; }
 
         public Account(
             string accountNumber,
@@ -24,10 +24,10 @@ namespace VDemyanov.BankApp.Domain
             bool SMS_alert,
             Owner owner)
         {
-            this.accountNumber = accountNumber;
-            this.accountType = accountType;
-            this.balance = balance;
-            this.openingDate = openingDate;
+            this.AccountNumber = accountNumber;
+            this.AccountType = accountType;
+            this.Balance = balance;
+            this.OpeningDate = openingDate;
             this.InternetBanking = InternetBanking;
             this.SMS_alert = SMS_alert;
             this.owner = owner;
@@ -36,10 +36,10 @@ namespace VDemyanov.BankApp.Domain
         public override string ToString()
         {
             return base.ToString() + " " +
-                this.accountNumber + " " +
-                this.accountType + " " +
-                this.balance + " " +
-                this.openingDate + " " +
+                this.AccountNumber + " " +
+                this.AccountType + " " +
+                this.Balance + " " +
+                this.OpeningDate + " " +
                 this.InternetBanking + " " +
                 this.SMS_alert + " " +
                 owner.ToString();

@@ -18,7 +18,7 @@ namespace NUnitTestBankApp
         {
             Account account = new Account(
                 "123k", "someType", 234, DateTime.Now, true, false,
-                new Client("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "passport"));
+                new Owner("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "passport"));
             Console.WriteLine(account.ToString());
             Assert.Pass();
         }
@@ -26,14 +26,17 @@ namespace NUnitTestBankApp
         [Test]
         public void TestCreatingAccountsFile()
         {
-            AccountsRepository accountsRepository = new AccountsRepository();
-            Assert.Pass();
-        }
+            Account account = new Account(
+                "123k", "someType", 234, DateTime.Now, true, false,
+                new Owner("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "passport"));
 
-        [Test]
-        public void TestCreatingClientsFile()
-        {
-            ClientsRepository accountsRepository = new ClientsRepository();
+            Account account2 = new Account(
+                "124k", "someType", 234, DateTime.Now, true, false,
+                new Owner("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "passport"));
+
+            AccountsRepository accountsRepository = new AccountsRepository();
+            accountsRepository.AddAccount(account);
+            accountsRepository.AddAccount(account2);
             Assert.Pass();
         }
     }
