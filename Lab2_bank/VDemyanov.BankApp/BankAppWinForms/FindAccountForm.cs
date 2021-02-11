@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace VDemyanov.BankApp.BankAppWinForms
 {
-    public partial class Form1 : Form
+    public partial class FindAccountForm : Form
     {
-        public Form1()
+        public FindAccountForm()
         {
             InitializeComponent();
+        }
+
+        private void FindAccountForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
