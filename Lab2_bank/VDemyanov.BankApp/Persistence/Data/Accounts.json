@@ -13,5 +13,185 @@
     "OpeningDate": "2021-02-13T17:13:17.4575849+03:00",
     "InternetBanking": false,
     "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "Vlad",
+      "LastName": "Demyanov",
+      "MiddleName": "Ruslanovich",
+      "Birthday": "2021-02-13T17:21:59.0979434+03:00",
+      "PassportData": "dfgdfg"
+    },
+    "AccountNumber": "k2",
+    "AccountType": "тест1",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T17:21:59.0979434+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "Ildar",
+      "LastName": "Demyanov",
+      "MiddleName": "Ruslanovich",
+      "Birthday": "2007-01-20T18:10:42",
+      "PassportData": "122-22-r23-94"
+    },
+    "AccountNumber": "1k",
+    "AccountType": "тест3",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T18:10:42.8091747+03:00",
+    "InternetBanking": true,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "Иван",
+      "LastName": "Иванов",
+      "MiddleName": "Иванович",
+      "Birthday": "2000-02-13T18:47:46",
+      "PassportData": "rw-123-456-lkl4"
+    },
+    "AccountNumber": "4k",
+    "AccountType": "текущий счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T18:47:46.6882187+03:00",
+    "InternetBanking": false,
+    "SMS_alert": true
+  },
+  {
+    "owner": {
+      "Name": "Test",
+      "LastName": "Kokdf",
+      "MiddleName": "SDfs",
+      "Birthday": "2021-02-03T19:19:04",
+      "PassportData": "sdf-sdf-sdf"
+    },
+    "AccountNumber": "5k",
+    "AccountType": "валютный счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T19:19:04.0396213+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T19:21:30.0179707+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "6k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T19:21:30.0069701+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T19:28:31.7394322+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "7k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T19:28:31.7244313+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T20:03:25.6763342+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "8k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:03:25.6653335+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T20:03:56.93208+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "9k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:03:56.9240796+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "test",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T20:25:20.2786052+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "10k",
+    "AccountType": "расчётный счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:25:20.2686049+03:00",
+    "InternetBanking": true,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "Test",
+      "LastName": "sdfsdf",
+      "MiddleName": "dsf",
+      "Birthday": "2021-02-13T20:29:13.3605279+03:00",
+      "PassportData": "sdf"
+    },
+    "AccountNumber": "11k",
+    "AccountType": "текущий счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:29:13.3505279+03:00",
+    "InternetBanking": true,
+    "SMS_alert": true
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T20:30:48.6986635+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "12k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:30:48.6886635+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "имя",
+      "LastName": "фамилия",
+      "MiddleName": "отчество",
+      "Birthday": "2021-02-13T20:33:41.1027638+03:00",
+      "PassportData": "паспортные данные"
+    },
+    "AccountNumber": "13k",
+    "AccountType": "",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T20:33:41.0927638+03:00",
+    "InternetBanking": false,
+    "SMS_alert": false
   }
 ]

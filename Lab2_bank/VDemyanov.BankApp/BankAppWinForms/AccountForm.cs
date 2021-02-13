@@ -27,6 +27,8 @@ namespace VDemyanov.BankApp.BankAppWinForms
             userLastNameField.ForeColor = Color.Gray;
             userMiddleNameField.ForeColor = Color.Gray;
             passportDataField.ForeColor = Color.Gray;
+
+            
         }
 
         private void AccountForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -115,12 +117,25 @@ namespace VDemyanov.BankApp.BankAppWinForms
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
+            // подключение репозиторию с данными
+            AccountsRepository accountsRepository = new AccountsRepository();
+
+            string accountNumber = (accountsRepository.GetAccountsLength() + 1) + "k";
+            string accountType = this.AccountTypeButton.Text;
+            DateTime openingDate = this.OpeningDateButton.Value;
+            // Owner
+            string name = this.userNameField.Text;
+            string lastName = this.userLastNameField.Text;
+            string middleName = this.userMiddleNameField.Text;
+            DateTime birthday = this.BirthdayButton.Value;
+            string passportData = this.passportDataField.Text;
+
             bool InternetBunking = false;
             if (this.InternetBankingButtonYes.Checked)
                 InternetBunking = true;
             else if (this.InternetBankingButtonNo.Checked)
                 InternetBunking = false;
-            
+
             bool Alert = false;
             if (this.AlertYesButton.Checked)
                 Alert = true;
@@ -128,22 +143,26 @@ namespace VDemyanov.BankApp.BankAppWinForms
                 Alert = false;
 
             Account account = new Account(
-                "k2120",
-                this.AccountTypeButton.Text,
+                accountNumber,
+                accountType,
                 0,
-                DateTime.Now,
+                openingDate,
                 InternetBunking,
                 Alert,
                 new Owner(
-                    "Vlad",
-                    "Demyanov",
-                    "Ruslanovich",
-                    DateTime.Now,
-                    "dfgdfg"
+                    name,
+                    lastName,
+                    middleName,
+                    birthday,
+                    passportData
                     )
                 );
-            AccountsRepository accountsRepository = new AccountsRepository();
+
             accountsRepository.AddAccount(account);
+
+            this.Hide();
+            SuccessForm successForm = new SuccessForm();
+            successForm.Show();
         }
     }
 }

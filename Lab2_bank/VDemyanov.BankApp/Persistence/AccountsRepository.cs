@@ -11,7 +11,7 @@ namespace VDemyanov.BankApp.Persistence
 {
     public class AccountsRepository : IGenericRepository<Account>
     {
-        public string pathToJSON = @"./../../../Persistence/Data/Accounts.json";
+        private string pathToJSON = @"./../../../Persistence/Data/Accounts.json";
         private List<Account> accounts;
 
         public AccountsRepository()
@@ -30,9 +30,13 @@ namespace VDemyanov.BankApp.Persistence
                 if (test != "" && test != null)
                 {                    
                     this.accounts = JsonConvert.DeserializeObject<List<Account>>(test);
-                }
-                    
+                }     
             }
+        }
+
+        public int GetAccountsLength()
+        {
+            return accounts.Count();
         }
 
         public void AddAccount(Account account)

@@ -70,6 +70,12 @@
       <DependentUpon>FindAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="SuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessForm.Designer.cs">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="FindAccountForm.resx">
       <DependentUpon>FindAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessForm.resx">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -116,6 +125,8 @@
       <Name>Persistence</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

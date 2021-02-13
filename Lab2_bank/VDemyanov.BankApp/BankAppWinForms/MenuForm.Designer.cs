@@ -29,6 +29,7 @@ namespace VDemyanov.BankApp.BankAppWinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,9 +46,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(154, 95);
+            this.panel1.Location = new System.Drawing.Point(116, 77);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 535);
+            this.panel1.Size = new System.Drawing.Size(367, 435);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -55,9 +57,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 100);
+            this.panel3.Location = new System.Drawing.Point(0, 81);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(489, 435);
+            this.panel3.Size = new System.Drawing.Size(367, 354);
             this.panel3.TabIndex = 1;
             // 
             // button1
@@ -67,9 +70,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(130, 62);
+            this.button1.Location = new System.Drawing.Point(98, 50);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 131);
+            this.button1.Size = new System.Drawing.Size(178, 106);
             this.button1.TabIndex = 2;
             this.button1.Text = "Создать новый счёт";
             this.button1.UseVisualStyleBackColor = false;
@@ -82,9 +86,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(130, 213);
+            this.button2.Location = new System.Drawing.Point(98, 173);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(238, 131);
+            this.button2.Size = new System.Drawing.Size(178, 106);
             this.button2.TabIndex = 1;
             this.button2.Text = "Вывести информацию о счёте";
             this.button2.UseVisualStyleBackColor = false;
@@ -96,8 +101,9 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(489, 100);
+            this.panel2.Size = new System.Drawing.Size(367, 81);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -106,22 +112,25 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(184, 28);
+            this.label1.Location = new System.Drawing.Point(138, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 46);
+            this.label1.Size = new System.Drawing.Size(97, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Меню";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(21)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(796, 716);
+            this.ClientSize = new System.Drawing.Size(597, 582);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

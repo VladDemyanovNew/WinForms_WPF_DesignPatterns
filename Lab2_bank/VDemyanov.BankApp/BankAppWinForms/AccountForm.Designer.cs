@@ -29,6 +29,7 @@ namespace VDemyanov.BankApp.BankAppWinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -75,9 +76,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(151, 99);
+            this.panel1.Location = new System.Drawing.Point(113, 80);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 535);
+            this.panel1.Size = new System.Drawing.Size(367, 435);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -86,9 +88,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 100);
+            this.panel3.Location = new System.Drawing.Point(0, 81);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(489, 435);
+            this.panel3.Size = new System.Drawing.Size(367, 354);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -99,23 +102,26 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.tableLayoutPanel4.Controls.Add(this.backToMenuButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.CreateAccountButton, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 375);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 305);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(489, 60);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(367, 49);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // backToMenuButton
             // 
             this.backToMenuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(67)))), ((int)(((byte)(227)))));
+            this.backToMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backToMenuButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backToMenuButton.ForeColor = System.Drawing.Color.White;
-            this.backToMenuButton.Location = new System.Drawing.Point(3, 3);
+            this.backToMenuButton.Location = new System.Drawing.Point(2, 2);
+            this.backToMenuButton.Margin = new System.Windows.Forms.Padding(2);
             this.backToMenuButton.Name = "backToMenuButton";
-            this.backToMenuButton.Size = new System.Drawing.Size(238, 54);
+            this.backToMenuButton.Size = new System.Drawing.Size(179, 45);
             this.backToMenuButton.TabIndex = 0;
             this.backToMenuButton.Text = "назад";
             this.backToMenuButton.UseVisualStyleBackColor = false;
@@ -124,13 +130,15 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // CreateAccountButton
             // 
             this.CreateAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(67)))), ((int)(((byte)(227)))));
+            this.CreateAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateAccountButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CreateAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateAccountButton.ForeColor = System.Drawing.Color.White;
-            this.CreateAccountButton.Location = new System.Drawing.Point(247, 3);
+            this.CreateAccountButton.Location = new System.Drawing.Point(185, 2);
+            this.CreateAccountButton.Margin = new System.Windows.Forms.Padding(2);
             this.CreateAccountButton.Name = "CreateAccountButton";
-            this.CreateAccountButton.Size = new System.Drawing.Size(239, 54);
+            this.CreateAccountButton.Size = new System.Drawing.Size(180, 45);
             this.CreateAccountButton.TabIndex = 1;
             this.CreateAccountButton.Text = "создать";
             this.CreateAccountButton.UseVisualStyleBackColor = false;
@@ -140,9 +148,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.panel5.Controls.Add(this.tableLayoutPanel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 167);
+            this.panel5.Location = new System.Drawing.Point(0, 136);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(489, 208);
+            this.panel5.Size = new System.Drawing.Size(367, 169);
             this.panel5.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -161,13 +170,14 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(489, 208);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(367, 169);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -178,11 +188,12 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.tableLayoutPanel5.Controls.Add(this.InternetBankingButtonYes, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.InternetBankingButtonNo, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(247, 159);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(185, 128);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(239, 46);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(180, 39);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // InternetBankingButtonYes
@@ -191,9 +202,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.InternetBankingButtonYes.AutoSize = true;
             this.InternetBankingButtonYes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InternetBankingButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.InternetBankingButtonYes.Location = new System.Drawing.Point(33, 11);
+            this.InternetBankingButtonYes.Location = new System.Drawing.Point(22, 9);
+            this.InternetBankingButtonYes.Margin = new System.Windows.Forms.Padding(2);
             this.InternetBankingButtonYes.Name = "InternetBankingButtonYes";
-            this.InternetBankingButtonYes.Size = new System.Drawing.Size(53, 24);
+            this.InternetBankingButtonYes.Size = new System.Drawing.Size(45, 21);
             this.InternetBankingButtonYes.TabIndex = 9;
             this.InternetBankingButtonYes.TabStop = true;
             this.InternetBankingButtonYes.Text = "Да";
@@ -205,9 +217,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.InternetBankingButtonNo.AutoSize = true;
             this.InternetBankingButtonNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InternetBankingButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.InternetBankingButtonNo.Location = new System.Drawing.Point(147, 11);
+            this.InternetBankingButtonNo.Location = new System.Drawing.Point(109, 9);
+            this.InternetBankingButtonNo.Margin = new System.Windows.Forms.Padding(2);
             this.InternetBankingButtonNo.Name = "InternetBankingButtonNo";
-            this.InternetBankingButtonNo.Size = new System.Drawing.Size(63, 24);
+            this.InternetBankingButtonNo.Size = new System.Drawing.Size(51, 21);
             this.InternetBankingButtonNo.TabIndex = 8;
             this.InternetBankingButtonNo.TabStop = true;
             this.InternetBankingButtonNo.Text = "Нет";
@@ -217,9 +230,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.OpeningDateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OpeningDateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OpeningDateButton.Location = new System.Drawing.Point(268, 64);
+            this.OpeningDateButton.Location = new System.Drawing.Point(201, 51);
+            this.OpeningDateButton.Margin = new System.Windows.Forms.Padding(2);
             this.OpeningDateButton.Name = "OpeningDateButton";
-            this.OpeningDateButton.Size = new System.Drawing.Size(196, 27);
+            this.OpeningDateButton.Size = new System.Drawing.Size(148, 23);
             this.OpeningDateButton.TabIndex = 7;
             // 
             // label3
@@ -227,11 +241,12 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(2, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 52);
+            this.label3.Size = new System.Drawing.Size(179, 42);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Тип вклада";
+            this.label3.Text = "Тип счёта";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -239,9 +254,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Location = new System.Drawing.Point(2, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(238, 52);
+            this.label4.Size = new System.Drawing.Size(179, 42);
             this.label4.TabIndex = 1;
             this.label4.Text = "Дата открытия";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,9 +267,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 104);
+            this.label5.Location = new System.Drawing.Point(2, 84);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 52);
+            this.label5.Size = new System.Drawing.Size(179, 42);
             this.label5.TabIndex = 2;
             this.label5.Text = "СМС оповещение";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,9 +280,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(3, 156);
+            this.label6.Location = new System.Drawing.Point(2, 126);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(238, 52);
+            this.label6.Size = new System.Drawing.Size(179, 43);
             this.label6.TabIndex = 3;
             this.label6.Text = "Интернет-банкинг";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,19 +291,20 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // AccountTypeButton
             // 
             this.AccountTypeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AccountTypeButton.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.AccountTypeButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AccountTypeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AccountTypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AccountTypeButton.FormattingEnabled = true;
             this.AccountTypeButton.Items.AddRange(new object[] {
-            "тест1",
-            "тест2",
-            "тест3",
-            "тест4"});
-            this.AccountTypeButton.Location = new System.Drawing.Point(268, 12);
+            "расчётный счёт",
+            "валютный счёт",
+            "текущий счёт"});
+            this.AccountTypeButton.Location = new System.Drawing.Point(201, 8);
+            this.AccountTypeButton.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTypeButton.Name = "AccountTypeButton";
-            this.AccountTypeButton.Size = new System.Drawing.Size(196, 28);
+            this.AccountTypeButton.Size = new System.Drawing.Size(148, 25);
             this.AccountTypeButton.TabIndex = 6;
-            this.AccountTypeButton.Text = "тест1";
             // 
             // tableLayoutPanel3
             // 
@@ -295,11 +314,12 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.tableLayoutPanel3.Controls.Add(this.AlertYesButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.AlertNoButton, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(247, 107);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(185, 86);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(239, 46);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(180, 38);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // AlertYesButton
@@ -308,9 +328,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.AlertYesButton.AutoSize = true;
             this.AlertYesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AlertYesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AlertYesButton.Location = new System.Drawing.Point(33, 11);
+            this.AlertYesButton.Location = new System.Drawing.Point(22, 8);
+            this.AlertYesButton.Margin = new System.Windows.Forms.Padding(2);
             this.AlertYesButton.Name = "AlertYesButton";
-            this.AlertYesButton.Size = new System.Drawing.Size(53, 24);
+            this.AlertYesButton.Size = new System.Drawing.Size(45, 21);
             this.AlertYesButton.TabIndex = 9;
             this.AlertYesButton.TabStop = true;
             this.AlertYesButton.Text = "Да";
@@ -322,9 +343,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.AlertNoButton.AutoSize = true;
             this.AlertNoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AlertNoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AlertNoButton.Location = new System.Drawing.Point(147, 11);
+            this.AlertNoButton.Location = new System.Drawing.Point(109, 8);
+            this.AlertNoButton.Margin = new System.Windows.Forms.Padding(2);
             this.AlertNoButton.Name = "AlertNoButton";
-            this.AlertNoButton.Size = new System.Drawing.Size(63, 24);
+            this.AlertNoButton.Size = new System.Drawing.Size(51, 21);
             this.AlertNoButton.TabIndex = 8;
             this.AlertNoButton.TabStop = true;
             this.AlertNoButton.Text = "Нет";
@@ -335,8 +357,9 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel4.Controls.Add(this.tableLayoutPanel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(489, 167);
+            this.panel4.Size = new System.Drawing.Size(367, 136);
             this.panel4.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -353,22 +376,24 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.tableLayoutPanel1.Controls.Add(this.BirthdayButton, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 167);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(367, 136);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // userLastNameField
             // 
             this.userLastNameField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userLastNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userLastNameField.Location = new System.Drawing.Point(268, 10);
+            this.userLastNameField.Location = new System.Drawing.Point(201, 8);
+            this.userLastNameField.Margin = new System.Windows.Forms.Padding(2);
             this.userLastNameField.Multiline = true;
             this.userLastNameField.Name = "userLastNameField";
-            this.userLastNameField.Size = new System.Drawing.Size(196, 36);
+            this.userLastNameField.Size = new System.Drawing.Size(148, 30);
             this.userLastNameField.TabIndex = 0;
             this.userLastNameField.Enter += new System.EventHandler(this.userLastNameField_Enter);
             this.userLastNameField.Leave += new System.EventHandler(this.userLastNameField_Leave);
@@ -377,10 +402,11 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.userNameField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userNameField.Location = new System.Drawing.Point(18, 10);
+            this.userNameField.Location = new System.Drawing.Point(13, 8);
+            this.userNameField.Margin = new System.Windows.Forms.Padding(2);
             this.userNameField.Multiline = true;
             this.userNameField.Name = "userNameField";
-            this.userNameField.Size = new System.Drawing.Size(207, 36);
+            this.userNameField.Size = new System.Drawing.Size(156, 30);
             this.userNameField.TabIndex = 5;
             this.userNameField.Enter += new System.EventHandler(this.userNameField_Enter);
             this.userNameField.Leave += new System.EventHandler(this.userNameField_Leave);
@@ -389,11 +415,12 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.passportDataField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passportDataField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passportDataField.Location = new System.Drawing.Point(268, 67);
+            this.passportDataField.Location = new System.Drawing.Point(201, 55);
+            this.passportDataField.Margin = new System.Windows.Forms.Padding(2);
             this.passportDataField.Multiline = true;
             this.passportDataField.Name = "passportDataField";
             this.passportDataField.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.passportDataField.Size = new System.Drawing.Size(196, 36);
+            this.passportDataField.Size = new System.Drawing.Size(148, 30);
             this.passportDataField.TabIndex = 2;
             this.passportDataField.Enter += new System.EventHandler(this.passportDataField_Enter);
             this.passportDataField.Leave += new System.EventHandler(this.passportDataField_Leave);
@@ -402,10 +429,11 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.userMiddleNameField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userMiddleNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userMiddleNameField.Location = new System.Drawing.Point(18, 67);
+            this.userMiddleNameField.Location = new System.Drawing.Point(13, 55);
+            this.userMiddleNameField.Margin = new System.Windows.Forms.Padding(2);
             this.userMiddleNameField.Multiline = true;
             this.userMiddleNameField.Name = "userMiddleNameField";
-            this.userMiddleNameField.Size = new System.Drawing.Size(207, 36);
+            this.userMiddleNameField.Size = new System.Drawing.Size(156, 30);
             this.userMiddleNameField.TabIndex = 6;
             this.userMiddleNameField.Enter += new System.EventHandler(this.userMiddleNameField_Enter);
             this.userMiddleNameField.Leave += new System.EventHandler(this.userMiddleNameField_Leave);
@@ -415,10 +443,11 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 114);
+            this.label2.Location = new System.Drawing.Point(2, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(3);
-            this.label2.Size = new System.Drawing.Size(238, 53);
+            this.label2.Padding = new System.Windows.Forms.Padding(2);
+            this.label2.Size = new System.Drawing.Size(179, 42);
             this.label2.TabIndex = 7;
             this.label2.Text = "Дата рождения";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,9 +456,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
             // 
             this.BirthdayButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BirthdayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BirthdayButton.Location = new System.Drawing.Point(268, 127);
+            this.BirthdayButton.Location = new System.Drawing.Point(201, 103);
+            this.BirthdayButton.Margin = new System.Windows.Forms.Padding(2);
             this.BirthdayButton.Name = "BirthdayButton";
-            this.BirthdayButton.Size = new System.Drawing.Size(196, 27);
+            this.BirthdayButton.Size = new System.Drawing.Size(148, 23);
             this.BirthdayButton.TabIndex = 0;
             // 
             // panel2
@@ -438,8 +468,9 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(489, 100);
+            this.panel2.Size = new System.Drawing.Size(367, 81);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -448,21 +479,24 @@ namespace VDemyanov.BankApp.BankAppWinForms
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(88, 26);
+            this.label1.Location = new System.Drawing.Point(66, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 46);
+            this.label1.Size = new System.Drawing.Size(259, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Создание счёта";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccountForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(21)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(796, 716);
+            this.ClientSize = new System.Drawing.Size(597, 582);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "AccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
