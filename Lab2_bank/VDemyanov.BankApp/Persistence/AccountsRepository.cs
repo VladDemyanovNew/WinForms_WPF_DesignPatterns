@@ -11,7 +11,7 @@ namespace VDemyanov.BankApp.Persistence
 {
     public class AccountsRepository : IGenericRepository<Account>
     {
-        private string pathToJSON = @"./../../../../Persistence/Data/Accounts.json";
+        public string pathToJSON = @"./../../../Persistence/Data/Accounts.json";
         private List<Account> accounts;
 
         public AccountsRepository()

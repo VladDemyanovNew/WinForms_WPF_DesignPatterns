@@ -130,7 +130,7 @@ namespace VDemyanov.BankApp.BankAppWinForms
             Account account = new Account(
                 "k2120",
                 this.AccountTypeButton.Text,
-                123,
+                0,
                 DateTime.Now,
                 InternetBunking,
                 Alert,

@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAppWinForms", "BankAppW
 		{372FFB5D-FFAD-4A77-92CF-C83D49AEB0A1} = {372FFB5D-FFAD-4A77-92CF-C83D49AEB0A1}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{43FCF109-1178-4042-A340-2B00145B12B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{43FCF109-1178-4042-A340-2B00145B12B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{372FFB5D-FFAD-4A77-92CF-C83D49AEB0A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{372FFB5D-FFAD-4A77-92CF-C83D49AEB0A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestBankApp", "NUnitTestBankApp\NUnitTestBankApp.csproj", "{2FA0AB76-0AB9-49EE-BFFA-CDA148D0A199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestBankApp", "NUnitTestBankApp\NUnitTestBankApp.csproj", "{2FA0AB76-0AB9-49EE-BFFA-CDA148D0A199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

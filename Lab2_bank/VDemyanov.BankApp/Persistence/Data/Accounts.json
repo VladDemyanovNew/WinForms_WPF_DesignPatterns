@@ -4,29 +4,14 @@
       "Name": "Vlad",
       "LastName": "Demyanov",
       "MiddleName": "Ruslanovich",
-      "Birthday": "2021-02-11T15:27:46.9158678+03:00",
-      "PassportData": "passport"
+      "Birthday": "2021-02-13T17:13:17.4575849+03:00",
+      "PassportData": "dfgdfg"
     },
-    "AccountNumber": "123k",
-    "AccountType": "someType",
-    "Balance": 234.0,
-    "OpeningDate": "2021-02-11T15:27:46.9158678+03:00",
-    "InternetBanking": true,
-    "SMS_alert": false
-  },
-  {
-    "owner": {
-      "Name": "Vlad",
-      "LastName": "Demyanov",
-      "MiddleName": "Ruslanovich",
-      "Birthday": "2021-02-11T15:29:00.104054+03:00",
-      "PassportData": "passport"
-    },
-    "AccountNumber": "124k",
-    "AccountType": "someType",
-    "Balance": 234.0,
-    "OpeningDate": "2021-02-11T15:29:00.104054+03:00",
-    "InternetBanking": true,
+    "AccountNumber": "k2120",
+    "AccountType": "тест1",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-13T17:13:17.4575849+03:00",
+    "InternetBanking": false,
     "SMS_alert": false
   }
 ]
