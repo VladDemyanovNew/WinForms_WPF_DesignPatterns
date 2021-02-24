@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -158,11 +159,38 @@ namespace VDemyanov.BankApp.BankAppWinForms
                     )
                 );
 
-            accountsRepository.AddAccount(account);
+            var results = new List<ValidationResult>();
+            var contextAccount = new ValidationContext(account);
+            var contextOwner = new ValidationContext(account.owner);
 
-            this.Hide();
-            SuccessForm successForm = new SuccessForm();
-            successForm.Show();
+            bool res1 = tryValidateObject(account, contextAccount, results);
+            bool res2 = tryValidateObject(account.owner, contextOwner, results);
+
+            if (res1 && res2)
+            {
+                accountsRepository.AddAccount(account);
+
+                this.Hide();
+                SuccessForm successForm = new SuccessForm();
+                successForm.Show();
+            }     
+        }
+
+        private bool tryValidateObject(object obj, ValidationContext validationContext, ICollection<ValidationResult> validationResults)
+        {
+            if (!Validator.TryValidateObject(obj, validationContext, validationResults, true))
+            {
+                string warning = validationResults.First().ErrorMessage;
+                MessageBox.Show(
+                    warning,
+                    "Ошибка!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using VDemyanov.BankApp.Domain.Persons;
 
@@ -9,10 +10,14 @@ namespace VDemyanov.BankApp.Domain
     {
         public Owner owner;
         public string AccountNumber { get; }
+        [Required(ErrorMessage ="Тип счёта не установлен")]
         public string AccountType { get; }
         public decimal Balance { get; }
+        [Required(ErrorMessage = "Дата открытия счёта не установлена")]
         public DateTime OpeningDate { get; }
+        [Required(ErrorMessage = "Наличие интернет-банкинга не установлено")]
         public bool InternetBanking { get; }
+        [Required(ErrorMessage = "Наличие смс уведомления")]
         public bool SMS_alert { get; }
 
         public Account(

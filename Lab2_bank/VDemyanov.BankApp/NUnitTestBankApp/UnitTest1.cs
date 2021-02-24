@@ -1,8 +1,10 @@
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using VDemyanov.BankApp.Domain;
 using VDemyanov.BankApp.Domain.Persons;
 using VDemyanov.BankApp.Persistence;
+using VDemyanov.BankApp.Persistence.Enum;
 
 namespace NUnitTestBankApp
 {
@@ -37,6 +39,20 @@ namespace NUnitTestBankApp
             AccountsRepository accountsRepository = new AccountsRepository();
             accountsRepository.AddAccount(account);
             accountsRepository.AddAccount(account2);
+            Assert.Pass();
+        }
+
+        [Test]
+        public void TestSearching()
+        {
+            AccountsRepository accountsRepository = new AccountsRepository();
+            List<Account> accounts = accountsRepository.SearchByOptions(SearchOptions.RegExpr, "вл");
+            accounts = AccountsRepository.SortByAccountTypeAndOpeningDate(accounts);
+            if (accounts.Count == 0)
+                Console.WriteLine("Ничего не найдено");
+            else
+                foreach (Account acc in accounts)
+                    Console.WriteLine(acc.ToString());
             Assert.Pass();
         }
     }

@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace VDemyanov.BankApp.BankAppWinForms
 {
+    // TODO: Переделать регулярку для паспорта
+    // TODO: Прикрутить интерфейс к логике
+
     static class Program
     {
         /// <summary>
