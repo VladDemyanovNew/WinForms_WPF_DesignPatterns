@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using VDemyanov.BankApp.Domain;
+using VDemyanov.BankApp.Domain.Patterns;
 using VDemyanov.BankApp.Domain.Persons;
 using VDemyanov.BankApp.Persistence;
 using VDemyanov.BankApp.Persistence.Enum;
@@ -53,6 +54,39 @@ namespace NUnitTestBankApp
             else
                 foreach (Account acc in accounts)
                     Console.WriteLine(acc.ToString());
+            Assert.Pass();
+        }
+    
+        [Test]
+        public void TestAbstaractFactoryAndBuilder()
+        {
+            
+            Owner owner = new Owner("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "GH92OL88II99PP");
+            Account account = new Account("7k", "валютный счёт", 2000, DateTime.Now, true, false, owner);
+
+            CardDesigner cardDesigner = new CardDesigner();
+            CardBuilder cardBuilder = new CreditCardBuilder(new CreditCardFactory(account, owner));
+
+            Card creditCard = cardDesigner.ReleaseCard(cardBuilder);
+
+            Console.WriteLine(creditCard.ToString());
+            creditCard.ToPerformOperation();
+
+            Assert.Pass();
+        }
+
+        [Test]
+        public void TestSingleton()
+        {
+            Computer comp = new Computer();
+            comp.Launch("Windows 8.1");
+            Console.WriteLine(comp.OS.Name);
+
+            // у нас не получится изменить ОС, так как объект уже создан    
+            comp.OS = OS.getInstance("Windows 10");
+            comp.Launch("Windows 10");
+            Console.WriteLine(comp.OS.Name);
+
             Assert.Pass();
         }
     }
