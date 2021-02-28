@@ -76,18 +76,13 @@ namespace NUnitTestBankApp
         }
 
         [Test]
-        public void TestSingleton()
+        public void TestPrototype()
         {
-            Computer comp = new Computer();
-            comp.Launch("Windows 8.1");
-            Console.WriteLine(comp.OS.Name);
-
-            // у нас не получится изменить ОС, так как объект уже создан    
-            comp.OS = OS.getInstance("Windows 10");
-            comp.Launch("Windows 10");
-            Console.WriteLine(comp.OS.Name);
-
-            Assert.Pass();
+            IOwner owner = new Owner("Vlad", "Demyanov", "Ruslanovich", DateTime.Now, "GH92OL88II99PP");
+            IOwner clonedOwner = owner.Clone();
+            Console.WriteLine("оригинал: " + owner.GetInfo());
+            Console.WriteLine("клон: " + clonedOwner.GetInfo());
         }
+
     }
 }

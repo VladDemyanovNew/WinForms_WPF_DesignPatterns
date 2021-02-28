@@ -1,91 +1,31 @@
 [
   {
     "owner": {
-      "Name": "Vlad",
-      "LastName": "Demyanov",
-      "MiddleName": "Ruslanovich",
-      "Birthday": "2021-02-24T01:54:53.6283535+03:00",
-      "PassportData": "sdf"
+      "Name": "Test",
+      "LastName": "Tset",
+      "MiddleName": "Stsd",
+      "Birthday": "2021-02-28T16:25:44.1793855+03:00",
+      "PassportData": "SDF123SDF1QWER"
     },
     "AccountNumber": "1k",
     "AccountType": "расчётный счёт",
-    "Balance": 100.0,
-    "OpeningDate": "2021-02-24T01:54:53.6043522+03:00",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-28T16:25:44.169385+03:00",
     "InternetBanking": true,
     "SMS_alert": true
   },
   {
     "owner": {
-      "Name": "Влад",
-      "LastName": "Демьянов",
-      "MiddleName": "Русланович",
-      "Birthday": "2021-02-24T01:55:36.6668152+03:00",
-      "PassportData": "4131087В052РВ4"
+      "Name": "Tesae",
+      "LastName": "Adsad",
+      "MiddleName": "Aasd",
+      "Birthday": "2021-02-28T18:30:48.5774413+03:00",
+      "PassportData": "ASD123RTY1YHUJ"
     },
     "AccountNumber": "2k",
-    "AccountType": "расчётный счёт",
-    "Balance": 300.0,
-    "OpeningDate": "2021-02-24T01:55:36.6528144+03:00",
-    "InternetBanking": true,
-    "SMS_alert": true
-  },
-  {
-    "owner": {
-      "Name": "Влад",
-      "LastName": "Дыва",
-      "MiddleName": "Авыва",
-      "Birthday": "2021-02-24T01:56:39.3564008+03:00",
-      "PassportData": "4091987В052РВ4"
-    },
-    "AccountNumber": "3k",
-    "AccountType": "расчётный счёт",
-    "Balance": 600.0,
-    "OpeningDate": "2021-02-24T01:56:39.3454002+03:00",
-    "InternetBanking": false,
-    "SMS_alert": true
-  },
-  {
-    "owner": {
-      "Name": "Мдфв",
-      "LastName": "Фыв",
-      "MiddleName": "Выфв",
-      "Birthday": "2021-02-24T10:44:05.2384582+03:00",
-      "PassportData": "12JK23LL88II22"
-    },
-    "AccountNumber": "4k",
-    "AccountType": "расчётный счёт",
-    "Balance": 700.0,
-    "OpeningDate": "2021-02-24T10:44:05.2034562+03:00",
-    "InternetBanking": true,
-    "SMS_alert": true
-  },
-  {
-    "owner": {
-      "Name": "Test",
-      "LastName": "Fsdf",
-      "MiddleName": "Sdsff",
-      "Birthday": "2021-02-24T18:51:57.884291+03:00",
-      "PassportData": "DS34SDF43F3333"
-    },
-    "AccountNumber": "5k",
-    "AccountType": "валютный счёт",
-    "Balance": 250.0,
-    "OpeningDate": "2021-02-24T18:51:57.8530909+03:00",
-    "InternetBanking": true,
-    "SMS_alert": true
-  },
-  {
-    "owner": {
-      "Name": "Ильдар",
-      "LastName": "Демьянов",
-      "MiddleName": "Русланович",
-      "Birthday": "2021-02-24T21:54:41.7422084+03:00",
-      "PassportData": "GH92OL88II99PP"
-    },
-    "AccountNumber": "6k",
     "AccountType": "валютный счёт",
     "Balance": 0.0,
-    "OpeningDate": "2021-02-24T21:54:41.7282076+03:00",
+    "OpeningDate": "2021-02-28T18:30:48.5664406+03:00",
     "InternetBanking": false,
     "SMS_alert": true
   }

@@ -79,7 +79,8 @@
     <Compile Include="SearchResultsForm.Designer.cs">
       <DependentUpon>SearchResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\InterfaceSettings.cs" />
+    <Compile Include="Settings\DataSettings.cs" />
     <Compile Include="SuccessForm.cs">
       <SubType>Form</SubType>
     </Compile>

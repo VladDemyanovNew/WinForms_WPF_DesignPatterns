@@ -19,10 +19,10 @@ namespace VDemyanov.BankApp.BankAppWinForms
         public AccountForm()
         {
             InitializeComponent();
-            userNameField.Text = Settings.UserNameField;
-            userLastNameField.Text = Settings.UserLastNameField;
-            userMiddleNameField.Text = Settings.UserMiddleNameField;
-            passportDataField.Text = Settings.PassportDataField;
+            userNameField.Text = DataSettings.UserNameField;
+            userLastNameField.Text = DataSettings.UserLastNameField;
+            userMiddleNameField.Text = DataSettings.UserMiddleNameField;
+            passportDataField.Text = DataSettings.PassportDataField;
 
             userNameField.ForeColor = Color.Gray;
             userLastNameField.ForeColor = Color.Gray;
@@ -39,7 +39,7 @@ namespace VDemyanov.BankApp.BankAppWinForms
 
         private void userNameField_Enter(object sender, EventArgs e)
         {
-            if (userNameField.Text == Settings.UserNameField)
+            if (userNameField.Text == DataSettings.UserNameField)
             {
                 userNameField.Text = "";
                 userNameField.ForeColor = Color.Black;
@@ -51,13 +51,13 @@ namespace VDemyanov.BankApp.BankAppWinForms
             if (userNameField.Text == "")
             {
                 userNameField.ForeColor = Color.Gray;
-                userNameField.Text = Settings.UserNameField;
+                userNameField.Text = DataSettings.UserNameField;
             }                
         }
 
         private void userLastNameField_Enter(object sender, EventArgs e)
         {
-            if (userLastNameField.Text == Settings.UserLastNameField)
+            if (userLastNameField.Text == DataSettings.UserLastNameField)
             {
                 userLastNameField.Text = "";
                 userLastNameField.ForeColor = Color.Black;
@@ -69,13 +69,13 @@ namespace VDemyanov.BankApp.BankAppWinForms
             if (userLastNameField.Text == "")
             {
                 userLastNameField.ForeColor = Color.Gray;
-                userLastNameField.Text = Settings.UserLastNameField;
+                userLastNameField.Text = DataSettings.UserLastNameField;
             }
         }
 
         private void userMiddleNameField_Enter(object sender, EventArgs e)
         {
-            if (userMiddleNameField.Text == Settings.UserMiddleNameField)
+            if (userMiddleNameField.Text == DataSettings.UserMiddleNameField)
             {
                 userMiddleNameField.Text = "";
                 userMiddleNameField.ForeColor = Color.Black;
@@ -87,13 +87,13 @@ namespace VDemyanov.BankApp.BankAppWinForms
             if (userMiddleNameField.Text == "")
             {
                 userMiddleNameField.ForeColor = Color.Gray;
-                userMiddleNameField.Text = Settings.UserMiddleNameField;
+                userMiddleNameField.Text = DataSettings.UserMiddleNameField;
             }
         }
 
         private void passportDataField_Enter(object sender, EventArgs e)
         {
-            if (passportDataField.Text == Settings.PassportDataField)
+            if (passportDataField.Text == DataSettings.PassportDataField)
             {
                 passportDataField.Text = "";
                 passportDataField.ForeColor = Color.Black;
@@ -105,7 +105,7 @@ namespace VDemyanov.BankApp.BankAppWinForms
             if (passportDataField.Text == "")
             {
                 passportDataField.ForeColor = Color.Gray;
-                passportDataField.Text = Settings.PassportDataField;
+                passportDataField.Text = DataSettings.PassportDataField;
             }
         }
 

@@ -6,7 +6,7 @@ using VDemyanov.BankApp.Domain.Attributes;
 
 namespace VDemyanov.BankApp.Domain.Persons
 {
-    public class Owner
+    public class Owner : IOwner
     {
         [Required(ErrorMessage = "Имя не установлено")]
         [StringLength(50, MinimumLength = 3)]
@@ -36,6 +36,16 @@ namespace VDemyanov.BankApp.Domain.Persons
         }
 
         public override string ToString()
+        {
+            return this.Name + " " + this.LastName + " " + this.MiddleName + " " + this.Birthday + " " + this.PassportData;
+        }
+
+        public IOwner Clone()
+        {
+            return new Owner(this.Name, this.LastName, this.MiddleName, this.Birthday, this.PassportData);
+        }
+
+        public string GetInfo()
         {
             return this.Name + " " + this.LastName + " " + this.MiddleName + " " + this.Birthday + " " + this.PassportData;
         }

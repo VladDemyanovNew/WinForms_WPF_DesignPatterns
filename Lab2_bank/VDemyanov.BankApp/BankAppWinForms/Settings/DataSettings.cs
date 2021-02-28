@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VDemyanov.BankApp.BankAppWinForms
 {
-    public static class Settings
+    public static class DataSettings
     {
         public static string UserNameField { get; } = "имя";
         public static string UserLastNameField { get; } = "фамилия";
