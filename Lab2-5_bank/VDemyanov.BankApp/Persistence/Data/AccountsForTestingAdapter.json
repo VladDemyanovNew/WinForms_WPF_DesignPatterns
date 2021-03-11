@@ -1,0 +1,32 @@
+[
+  {
+    "owner": {
+      "Name": "Vlad",
+      "LastName": "Demyanov",
+      "MiddleName": "Ruslanovich",
+      "Birthday": "2021-03-10T00:13:57.6861794+03:00",
+      "PassportData": "GH92OL88II99PP"
+    },
+    "AccountNumber": "7k",
+    "AccountType": "валютный счёт",
+    "Balance": 2000.0,
+    "OpeningDate": "2021-03-10T00:13:57.6861794+03:00",
+    "InternetBanking": true,
+    "SMS_alert": false
+  },
+  {
+    "owner": {
+      "Name": "Vlad",
+      "LastName": "Demyanov",
+      "MiddleName": "Ruslanovich",
+      "Birthday": "2021-03-10T00:48:18.9900792+03:00",
+      "PassportData": "GH92OL88II99PP"
+    },
+    "AccountNumber": "8k",
+    "AccountType": "расчётный счёт",
+    "Balance": 3000.0,
+    "OpeningDate": "2021-03-10T00:48:18.9910793+03:00",
+    "InternetBanking": true,
+    "SMS_alert": false
+  }
+]

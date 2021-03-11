@@ -1,0 +1,62 @@
+[
+  {
+    "owner": {
+      "Name": "Test",
+      "LastName": "Tset",
+      "MiddleName": "Stsd",
+      "Birthday": "2021-02-28T16:25:44.1793855+03:00",
+      "PassportData": "SDF123SDF1QWER"
+    },
+    "AccountNumber": "1k",
+    "AccountType": "расчётный счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-28T16:25:44.169385+03:00",
+    "InternetBanking": true,
+    "SMS_alert": true
+  },
+  {
+    "owner": {
+      "Name": "Tesae",
+      "LastName": "Adsad",
+      "MiddleName": "Aasd",
+      "Birthday": "2021-02-28T18:30:48.5774413+03:00",
+      "PassportData": "ASD123RTY1YHUJ"
+    },
+    "AccountNumber": "2k",
+    "AccountType": "валютный счёт",
+    "Balance": 0.0,
+    "OpeningDate": "2021-02-28T18:30:48.5664406+03:00",
+    "InternetBanking": false,
+    "SMS_alert": true
+  },
+  {
+    "owner": {
+      "Name": "Мдфв",
+      "LastName": "Вфыв",
+      "MiddleName": "Ффыв",
+      "Birthday": "2021-03-03T10:23:19.3281801+03:00",
+      "PassportData": "GHA123SDF123WE"
+    },
+    "AccountNumber": "3k",
+    "AccountType": "валютный счёт",
+    "Balance": 200.0,
+    "OpeningDate": "2021-03-03T10:23:19.3125801+03:00",
+    "InternetBanking": false,
+    "SMS_alert": true
+  },
+  {
+    "owner": {
+      "Name": "Vlad",
+      "LastName": "Demyanov",
+      "MiddleName": "Ruslanovich",
+      "Birthday": "2021-03-11T16:55:15.91221+03:00",
+      "PassportData": "GH92OL88II99PP"
+    },
+    "AccountNumber": "7k",
+    "AccountType": "валютный счёт",
+    "Balance": 2000.0,
+    "OpeningDate": "2021-03-11T16:55:15.91221+03:00",
+    "InternetBanking": true,
+    "SMS_alert": false
+  }
+]
