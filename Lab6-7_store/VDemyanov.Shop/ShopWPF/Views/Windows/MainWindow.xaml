@@ -42,127 +42,6 @@
             </Grid>
 
             <ContentPresenter Grid.Row="1" x:Name="OutputView"/>
-
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3"
-                      HorizontalAlignment="Center" VerticalAlignment="Stretch" />
-
-                <Grid Grid.Column="0" Background="#FFFCFAFA">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="46*"/>
-                        <RowDefinition Height="544*"/>
-                        <RowDefinition Height="69*" />
-                    </Grid.RowDefinitions>
-
-                    <Grid  Grid.Row="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <TextBox Padding="50, 3, 3, 3" Foreground="#FF454545"  materialDesign:HintAssist.Hint="Search" Grid.ColumnSpan="3" Background="WhiteSmoke" FontSize="25" TextAlignment="Left" />
-                        <materialDesign:PackIcon Kind="Magnify" Foreground="Gray" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Grid>
-
-                    <ScrollViewer  CanContentScroll="True" Grid.Row="1">
-                        <StackPanel Orientation="Vertical">
-                            <Expander Background="#FFFCFAFA">
-                                <Expander.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Text="Price"/>
-                                </Expander.Header>
-                                <StackPanel  Margin="25,0,10,10">
-                                    <TextBlock Padding="0, 0, 0, 0" Foreground="#FF3F3F3F" Text="Select the price range of the product." />
-                                    <UniformGrid VerticalAlignment="Bottom" Rows="2" Columns="2">
-                                        <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="From"/>
-                                        <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Till"/>
-                                        <TextBox Foreground="Gray" BorderThickness="1,1,0,1"  />
-                                        <TextBox Foreground="Gray" BorderThickness="1"  />
-                                    </UniformGrid>
-                                </StackPanel>
-                            </Expander>
-                            <Expander Background="#FFFCFAFA">
-                                <Expander.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Text="Category"/>
-                                </Expander.Header>
-                                <StackPanel  Margin="25,0,10,10">
-                                    <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="Choose the kind of guitar you like." />
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Acoustic Guitars"/>
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Electric Guitars"/>
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Classical | Nylon Guitars"/>
-                                </StackPanel>
-                            </Expander>
-                            <Expander Background="#FFFCFAFA">
-                                <Expander.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Text="Brand"/>
-                                </Expander.Header>
-                                <StackPanel  Margin="25,0,0,10">
-                                    <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="Choose your favorite guitar brand." />
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Acoustic Guitars"/>
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Electric Guitars"/>
-                                    <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Classical | Nylon Guitars"/>
-                                </StackPanel>
-                            </Expander>
-                        </StackPanel>
-                    </ScrollViewer>
-
-                    <Button  Grid.Row="2" Width="200" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Filter" />
-                            <materialDesign:PackIcon Kind="Filter" Height="20" Width="20" Foreground="White"/>
-                        </StackPanel>
-                    </Button>
-                </Grid>
-
-                <ScrollViewer Grid.Column="3">
-                    <StackPanel>
-                        <TextBlock Padding="0,5" FontWeight="DemiBold" Text="Goods" FontSize="20" HorizontalAlignment="Center" />
-                        <StackPanel>
-                            <ItemsControl x:Name="guitarList" ItemsSource="{Binding Path=Guitars}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border BorderThickness="1" BorderBrush="#FF4F4F4F"  Background="White" Margin="20">
-                                            <Border.Effect>
-                                                <DropShadowEffect ShadowDepth="12" Opacity="0.3" BlurRadius="7"/>
-                                            </Border.Effect>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition />
-                                                    <ColumnDefinition />
-                                                </Grid.ColumnDefinitions>
-                                                <Image Grid.Column="0" Width="100" Source="{Binding ImagePath}"/>
-                                                <Border Grid.Column="1" Padding="10" Background="LightGray">
-                                                    <StackPanel>
-                                                        <TextBlock Padding="0,0,0,2" Foreground="#FF5A5A5A" Text="{Binding Brand}" />
-                                                        <TextBlock Padding="0,0,0,2" Foreground="Gray" Text="{Binding Category}" />
-                                                        <TextBlock Padding="0,0,0,2" Foreground="Gray" Text="{Binding Title}" />
-                                                        <Button Padding="0" BorderBrush="{x:Null}">
-                                                            <StackPanel  Orientation="Horizontal">
-                                                                <TextBlock Padding="0,0,5,0" FontSize="12" Text="{Binding Price}" />
-                                                                <materialDesign:PackIcon VerticalAlignment="Center" Kind="Cart" Height="15" Width="15" Foreground="White"/>
-                                                            </StackPanel>
-                                                        </Button>
-                                                    </StackPanel>
-                                                </Border>
-                                            </Grid>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <WrapPanel/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                            </ItemsControl>
-                        </StackPanel>
-                    </StackPanel>
-                </ScrollViewer>
-            </Grid>-->
-
         </Grid>
 
         <Grid Background="#FF454545" Grid.Column="0">
@@ -173,6 +52,28 @@
                     </Button>
                 </StackPanel>
             </Grid>
+
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button HorizontalContentAlignment="Left" Height="50" Background="{x:Null}" Grid.Row="0" BorderBrush="{x:Null}" Command="{Binding LoadProductsCommand}">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="GuitarElectric" Height="40" Width="40" Foreground="White"/>
+                        <TextBlock Text="Guitars" Foreground="White"  VerticalAlignment="Center" Margin="20, 0, 0, 0" />
+                    </StackPanel>
+                </Button>
+                <Button HorizontalContentAlignment="Left" Height="50" Background="{x:Null}" Grid.Row="1" BorderBrush="{x:Null}" Command="{Binding LoadAdminToolsCommand}">
+                    <StackPanel  Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="PersonStar" Height="40" Width="40" Foreground="White"/>
+                        <TextBlock Text="Admin Tools" Foreground="White" VerticalAlignment="Center" Margin="20, 0, 0, 0" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+            
+            <!--
             <ListView VerticalAlignment="Center" FontSize="20">
                 <ListViewItem>
                     <StackPanel Orientation="Horizontal">
@@ -180,13 +81,15 @@
                         <TextBlock Text="Guitars" Foreground="White"  VerticalAlignment="Center" Margin="20, 0, 0, 0" />
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem>
+                <ListViewItem Padding="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
                     <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="PersonStar" Height="40" Width="40" Foreground="White"/>
-                        <TextBlock Text="Admin Tools" Foreground="White" VerticalAlignment="Center" Margin="20, 0, 0, 0" />
+                            <materialDesign:PackIcon Kind="PersonStar" Height="40" Width="40" Foreground="White"/>
+                            <TextBlock Text="Admin Tools" Foreground="White" VerticalAlignment="Center" Margin="20, 0, 0, 0" />
                     </StackPanel>
                 </ListViewItem>
             </ListView>
+            -->
+            
             <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <Button  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">

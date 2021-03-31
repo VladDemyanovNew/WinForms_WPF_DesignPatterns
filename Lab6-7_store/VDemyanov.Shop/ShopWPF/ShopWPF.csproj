@@ -66,6 +66,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\AdminToolsViewModel.cs" />
+    <Compile Include="ViewModels\ProductsViewModel.cs" />
+    <Compile Include="Views\ViewServices\IMainWindowsCodeBehind.cs" />
+    <Compile Include="Views\ViewServices\ViewType.cs" />
+    <Compile Include="Views\Windows\AdminTools.xaml.cs">
+      <DependentUpon>AdminTools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\Products.xaml.cs">
+      <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Windows\AdminTools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +98,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Windows\Products.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
