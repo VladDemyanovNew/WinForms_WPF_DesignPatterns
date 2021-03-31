@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace VDemyanov.Shop.ShopWPF
+namespace VDemyanov.Shop.ShopWPF.Views.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Products.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Products : UserControl
     {
-        public MainWindow()
+        public Products()
         {
             InitializeComponent();
-        }
-
-        private void App_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
         }
     }
 }
