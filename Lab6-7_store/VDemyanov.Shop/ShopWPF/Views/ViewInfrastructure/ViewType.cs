@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VDemyanov.Shop.ShopWPF.Views.ViewServices
+namespace VDemyanov.Shop.ShopWPF.Views.ViewInfrastructure
 {
     /// <summary>
     /// Типы вьюшек для загрузки

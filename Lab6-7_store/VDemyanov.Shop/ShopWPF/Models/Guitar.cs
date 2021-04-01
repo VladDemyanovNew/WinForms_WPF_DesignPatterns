@@ -15,6 +15,11 @@ namespace VDemyanov.Shop.ShopWPF.Models
         public string Brand { get; set; }
         public string ImagePath { get; set; }
 
+        public Guitar()
+        {
+
+        }
+
         public Guitar(int Id, string Title, decimal Price, string Category, string Brand, string ImagePath)
         {
             this.Id = Id;

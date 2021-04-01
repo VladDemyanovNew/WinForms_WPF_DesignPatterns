@@ -26,27 +26,55 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Rectangle Margin="20,30,30,30" Grid.Column="0" AllowDrop="True"
-                               Fill="WhiteSmoke"
-                               StrokeDashArray="10"
-                               StrokeThickness="2"
-                               Stroke="Silver"
-                               StrokeDashCap="Round"
-                               RadiusX="10"
-                               RadiusY="10"/>
+                               Fill="WhiteSmoke" StrokeDashArray="10" StrokeThickness="2"
+                               Stroke="Silver" StrokeDashCap="Round" RadiusX="10"
+                               RadiusY="10" Drop="Rectangle_Drop"/>
 
                     <StackPanel Margin="20,0,20,0" VerticalAlignment="Center" Orientation="Vertical" Grid.Column="1">
-                        <TextBlock Padding="3,0,0,3" Text="Title" FontSize="15" Foreground="Gray"/>
-                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10"/>
+                        <TextBlock Text="Title" Padding="3,0,0,3" FontSize="15" Foreground="Gray"/>
+                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
+                            <TextBox.Text>
+                                <Binding Path="GuitarProp.Title">
+                                    <Binding.ValidationRules>
+                                        <ExceptionValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                         <TextBlock Padding="3,0,0,3" Text="Price" FontSize="15" Foreground="Gray"/>
-                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10"/>
+                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
+                            <TextBox.Text>
+                                <Binding Path="GuitarProp.Price">
+                                    <Binding.ValidationRules>
+                                        <ExceptionValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                         <TextBlock Padding="3,0,0,3" Text="Category" FontSize="15" Foreground="Gray"/>
-                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10"/>
+                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
+                            <TextBox.Text>
+                                <Binding Path="GuitarProp.Category">
+                                    <Binding.ValidationRules>
+                                        <ExceptionValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                         <TextBlock Padding="3,0,0,3" Text="Brand" FontSize="15" Foreground="Gray"/>
-                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1"/>
+                        <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1">
+                            <TextBox.Text>
+                                <Binding Path="GuitarProp.Brand" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <ExceptionValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                     </StackPanel>
                 </Grid>
 
-                <Button Width="100"  Padding="5" BorderBrush="{x:Null}"  Grid.Row="2">
+                <Button Command="{Binding CreateGuitarCommand}" Width="100"  Padding="5" BorderBrush="{x:Null}"  Grid.Row="2">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Create" Padding="0,0,5,0"/>
                         <materialDesign:PackIcon Kind="Creation" Height="20" Width="20" Foreground="White"/>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VDemyanov.Shop.ShopWPF.ViewModels;
-using VDemyanov.Shop.ShopWPF.Views.ViewServices;
+using VDemyanov.Shop.ShopWPF.Views.ViewInfrastructure;
 using VDemyanov.Shop.ShopWPF.Views.Windows;
 
 namespace VDemyanov.Shop.ShopWPF
@@ -36,7 +36,6 @@ namespace VDemyanov.Shop.ShopWPF
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            //загрузка вьюмодел для кнопок меню
             MainWindowViewModel vm = new MainWindowViewModel();
             //даем доступ к этому кодбихайнд
             vm.CodeBehind = this;
@@ -48,7 +47,7 @@ namespace VDemyanov.Shop.ShopWPF
         }
 
         /// <summary>
-        /// Загружает н
+        /// Загружает нужное представление
         /// </summary>
         /// <param name="typeView"></param>
         public void LoadView(ViewType typeView)

@@ -12,7 +12,7 @@ using VDemyanov.Shop.ShopWPF.Data;
 using VDemyanov.Shop.ShopWPF.Infrastructure.Commands;
 using VDemyanov.Shop.ShopWPF.Models;
 using VDemyanov.Shop.ShopWPF.ViewModels.Base;
-using VDemyanov.Shop.ShopWPF.Views.ViewServices;
+using VDemyanov.Shop.ShopWPF.Views.ViewInfrastructure;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace VDemyanov.Shop.ShopWPF.ViewModels

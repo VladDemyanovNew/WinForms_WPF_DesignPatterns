@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VDemyanov.Shop.ShopWPF.ViewModels;
 
 namespace VDemyanov.Shop.ShopWPF.Views.Windows
 {
@@ -23,6 +24,15 @@ namespace VDemyanov.Shop.ShopWPF.Views.Windows
         public AdminTools()
         {
             InitializeComponent();
+        }
+
+        private void Rectangle_Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                ((AdminToolsViewModel)this.DataContext).GuitarProp.ImagePath = files[0];
+            }
         }
     }
 }

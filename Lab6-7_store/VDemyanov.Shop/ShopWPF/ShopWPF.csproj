@@ -46,6 +46,9 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.4.0.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -68,8 +71,8 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\AdminToolsViewModel.cs" />
     <Compile Include="ViewModels\ProductsViewModel.cs" />
-    <Compile Include="Views\ViewServices\IMainWindowsCodeBehind.cs" />
-    <Compile Include="Views\ViewServices\ViewType.cs" />
+    <Compile Include="Views\ViewInfrastructure\IMainWindowsCodeBehind.cs" />
+    <Compile Include="Views\ViewInfrastructure\ViewType.cs" />
     <Compile Include="Views\Windows\AdminTools.xaml.cs">
       <DependentUpon>AdminTools.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Files\Guitars.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

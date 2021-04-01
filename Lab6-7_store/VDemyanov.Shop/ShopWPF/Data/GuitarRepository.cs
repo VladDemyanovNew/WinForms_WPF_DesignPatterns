@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +12,58 @@ namespace VDemyanov.Shop.ShopWPF.Data
 {
     internal class GuitarRepository
     {
+        private string pathToJSON = @"./../../Data/Files/Guitars.json";
         private ObservableCollection<Guitar> _Guitars;
 
         public GuitarRepository()
         {
-            _Guitars = new ObservableCollection<Guitar>
+
+            _Guitars = new ObservableCollection<Guitar>();
+
+            FileInfo fileInfo = new FileInfo(pathToJSON);
+            if (!fileInfo.Exists)
             {
-                new Guitar(1, "Title1", 300, "Category1", "Brand1", @"/Images/Guitar1.jpg"),
-                new Guitar(2, "Title2", 150, "Category2", "Brand2", @"/Images/Guitar2.jpg"),
-                new Guitar(3, "Title3", 600, "Category3", "Brand3", @"/Images/Guitar3.jpg"),
-                new Guitar(4, "Title4", 210, "Category4", "Brand4", @"/Images/Guitar4.jpg"),
-                new Guitar(5, "Title5", 450, "Category5", "Brand5", @"/Images/Guitar5.jpg")
-            };
+                using (FileStream fs = new FileStream(pathToJSON, FileMode.Create)) { };
+            }
+            else
+            {
+                using (StreamReader streamReader = new StreamReader(pathToJSON, true))
+                {
+                    string data = streamReader.ReadToEnd();
+                    if (data != "" && data != null)
+                    {
+                        this._Guitars = JsonConvert.DeserializeObject<ObservableCollection<Guitar>>(data);
+                    }
+                }
+            }
         }
 
+        /// <summary>
+        /// Записывает коллекции гитар в файл JSON
+        /// </summary>
+        private void WriteAccountsInJSON()
+        {
+            using (StreamWriter streamWriter = new StreamWriter(pathToJSON))
+            {
+                string json = JsonConvert.SerializeObject(_Guitars, Formatting.Indented);
+                streamWriter.Write(json);
+            }
+        }
+
+        /// <summary>
+        /// Добавляет гитары в коллекцию и записывает коллекции в json файл
+        /// </summary>
+        /// <param name="guitar"></param>
+        public void Add(Guitar guitar)
+        {
+            _Guitars.Add(guitar);
+            WriteAccountsInJSON();
+        }
+
+        /// <summary>
+        /// Возвращает коллекцию гитар
+        /// </summary>
+        /// <returns></returns>
         public ObservableCollection<Guitar> GetGuitars()
         {
             return _Guitars;
