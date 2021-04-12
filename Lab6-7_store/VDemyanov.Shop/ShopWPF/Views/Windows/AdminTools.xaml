@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VDemyanov.Shop.ShopWPF.Views.Windows"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid Background="#FF673AB7">
@@ -19,19 +19,22 @@
                     <RowDefinition Height="265*"/>
                     <RowDefinition Height="31*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" FontSize="20" FontWeight="DemiBold" Foreground="DarkSlateGray" Text="Guitar constructor" HorizontalAlignment="Center" Margin="206,0,206.4,2" Width="166"/>
+                <TextBlock Grid.Row="0" FontSize="20" FontWeight="DemiBold" Foreground="DarkSlateGray" Text="{DynamicResource AdminTools_Header}" HorizontalAlignment="Center" Margin="0,0,0.4,2" />
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0,3*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Rectangle Margin="20,30,30,30" Grid.Column="0" AllowDrop="True"
-                               Fill="WhiteSmoke" StrokeDashArray="10" StrokeThickness="2"
+                               Fill="WhiteSmoke" StrokeDashArray="10" StrokeThickness="3"
                                Stroke="Silver" StrokeDashCap="Round" RadiusX="10"
-                               RadiusY="10" Drop="Rectangle_Drop"/>
+                               RadiusY="10" Drop="Rectangle_Drop"
+                               Style="{DynamicResource EventTriggerTesting}"
+                               x:Name="dropArea"/>
+                    <fa:ImageAwesome AllowDrop="True" Height="70" Width="70" Foreground="LightGray" Icon="Image" />
 
                     <StackPanel Margin="20,0,20,0" VerticalAlignment="Center" Orientation="Vertical" Grid.Column="1">
-                        <TextBlock Text="Title" Padding="3,0,0,3" FontSize="15" Foreground="Gray"/>
+                        <TextBlock Text="{DynamicResource AdminTools_Title}" Padding="3,0,0,3" FontSize="15" Foreground="Gray"/>
                         <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
                             <TextBox.Text>
                                 <Binding Path="GuitarProp.Title">
@@ -41,7 +44,7 @@
                                 </Binding>
                             </TextBox.Text>
                         </TextBox>
-                        <TextBlock Padding="3,0,0,3" Text="Price" FontSize="15" Foreground="Gray"/>
+                        <TextBlock Padding="3,0,0,3" Text="{DynamicResource AdminTools_Price}" FontSize="15" Foreground="Gray"/>
                         <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
                             <TextBox.Text>
                                 <Binding Path="GuitarProp.Price">
@@ -51,7 +54,7 @@
                                 </Binding>
                             </TextBox.Text>
                         </TextBox>
-                        <TextBlock Padding="3,0,0,3" Text="Category" FontSize="15" Foreground="Gray"/>
+                        <TextBlock Padding="3,0,0,3" Text="{DynamicResource AdminTools_Category}" FontSize="15" Foreground="Gray"/>
                         <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10">
                             <TextBox.Text>
                                 <Binding Path="GuitarProp.Category">
@@ -61,7 +64,7 @@
                                 </Binding>
                             </TextBox.Text>
                         </TextBox>
-                        <TextBlock Padding="3,0,0,3" Text="Brand" FontSize="15" Foreground="Gray"/>
+                        <TextBlock Padding="3,0,0,3" Text="{DynamicResource AdminTools_Brand}" FontSize="15" Foreground="Gray"/>
                         <TextBox FontSize="20" Foreground="Silver" Padding="10,5" BorderBrush="LightGray" BorderThickness="1">
                             <TextBox.Text>
                                 <Binding Path="GuitarProp.Brand" UpdateSourceTrigger="PropertyChanged">
@@ -76,7 +79,7 @@
 
                 <Button Command="{Binding CreateGuitarCommand}" Width="100"  Padding="5" BorderBrush="{x:Null}"  Grid.Row="2">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Create" Padding="0,0,5,0"/>
+                        <TextBlock Text="{DynamicResource AdminTools_Create}" Padding="0,0,5,0"/>
                         <materialDesign:PackIcon Kind="Creation" Height="20" Width="20" Foreground="White"/>
                     </StackPanel>
                 </Button>

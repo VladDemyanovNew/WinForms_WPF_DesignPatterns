@@ -12,7 +12,10 @@
     <!--<Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>-->
-    <Grid Background="#FFE7E7E7" MouseDown="App_MouseDown">
+    <Window.Resources>
+        <Cursor x:Key="OpenHandCursor">D:\University\FourthSem\OOP\Labs\WinForms_WPF_DesignPatterns\Lab6-7_store\VDemyanov.Shop\ShopWPF\Images/cursor.ani</Cursor>
+    </Window.Resources>
+    <Grid Cursor="{StaticResource OpenHandCursor}" Style="{DynamicResource BackgroundGridStyle}" MouseDown="App_MouseDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="0,3*"></ColumnDefinition>
@@ -24,9 +27,9 @@
                 <RowDefinition Height="1,7*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Background="white" >
+            <Grid Grid.Row="0" Style="{DynamicResource HeaderStyle}" >
                 <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Margin="0, 0, 20, 0"  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Button Command="{Binding ChangeLanguageCommand}" Margin="0, 0, 20, 0"  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
                         <fa:ImageAwesome Height="25" Width="25" Foreground="#FF07079A" Icon="Language" />
                     </Button>
                     <Button  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
@@ -35,8 +38,8 @@
                     <Button  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
                         <fa:ImageAwesome Height="20" Width="20" Foreground="#FF454545" Icon="WindowMaximize" />
                     </Button>
-                    <Button Command="{Binding CloseApplicationCommand}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <fa:ImageAwesome Height="25" Width="25" Foreground="#FFEE0000" Icon="TimesCircle" />
+                    <Button Background="{x:Null}" Width="40" Height="40" Padding="0"  BorderBrush="{x:Null}" Command="{Binding CloseApplicationCommand}">
+                        <fa:ImageAwesome  Foreground="Red" Height="25" Width="25" Icon="TimesCircle" />
                     </Button>
                 </StackPanel>
             </Grid>
@@ -62,13 +65,13 @@
                 <Button HorizontalContentAlignment="Left" Height="50" Background="{x:Null}" Grid.Row="0" BorderBrush="{x:Null}" Command="{Binding LoadProductsCommand}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="GuitarElectric" Height="40" Width="40" Foreground="White"/>
-                        <TextBlock Text="Guitars" Foreground="White"  VerticalAlignment="Center" Margin="20, 0, 0, 0" />
+                        <TextBlock Text="{DynamicResource MainWindow_Menu_Guitars}" Foreground="White"  VerticalAlignment="Center" Margin="20, 0, 0, 0" />
                     </StackPanel>
                 </Button>
                 <Button HorizontalContentAlignment="Left" Height="50" Background="{x:Null}" Grid.Row="1" BorderBrush="{x:Null}" Command="{Binding LoadAdminToolsCommand}">
                     <StackPanel  Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="PersonStar" Height="40" Width="40" Foreground="White"/>
-                        <TextBlock Text="Admin Tools" Foreground="White" VerticalAlignment="Center" Margin="20, 0, 0, 0" />
+                        <TextBlock TextWrapping="Wrap" Text="{DynamicResource MainWindow_Menu_AdminTools}" Foreground="White" VerticalAlignment="Center" Margin="20, 0, 0, 0" />
                     </StackPanel>
                 </Button>
             </Grid>
@@ -92,7 +95,7 @@
             
             <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Button Command="{Binding ChangeThemeCommand}"  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
                         <materialDesign:PackIcon Kind="ThemeLightDark" Height="25" Width="25" Foreground="White"/>
                     </Button>
                 </StackPanel>

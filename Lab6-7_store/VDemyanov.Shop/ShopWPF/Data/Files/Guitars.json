@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "Title": "Guitar1",
+    "Price": 1000.0,
+    "Category": "Category1",
+    "Brand": "Brand1",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar5.jpg"
+  },
+  {
+    "Id": 2,
+    "Title": "Title123",
+    "Price": 12323.0,
+    "Category": "ASdfsdf",
+    "Brand": "Sdfdsf",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar3.jpg"
+  },
+  {
+    "Id": 3,
+    "Title": "Electro Guitar",
+    "Price": 1000.0,
+    "Category": "Electro",
+    "Brand": "Dfff",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar2.jpg"
+  },
+  {
+    "Id": 11,
+    "Title": "Test",
+    "Price": 122222.0,
+    "Category": "dsf",
+    "Brand": "sdfdsf",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar1.jpg"
+  },
+  {
+    "Id": 5,
+    "Title": "Test",
+    "Price": 2000.0,
+    "Category": "asds",
+    "Brand": "asdasd",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar3.jpg"
+  },
+  {
+    "Id": 6,
+    "Title": null,
+    "Price": 0.0,
+    "Category": null,
+    "Brand": null,
+    "ImagePath": null
+  },
+  {
+    "Id": 7,
+    "Title": null,
+    "Price": 0.0,
+    "Category": null,
+    "Brand": null,
+    "ImagePath": null
+  },
+  {
+    "Id": 8,
+    "Title": null,
+    "Price": 0.0,
+    "Category": null,
+    "Brand": null,
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar3.jpg"
+  },
+  {
+    "Id": 9,
+    "Title": "LastTest",
+    "Price": 0.0,
+    "Category": null,
+    "Brand": null,
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar4.jpg"
+  }
+]

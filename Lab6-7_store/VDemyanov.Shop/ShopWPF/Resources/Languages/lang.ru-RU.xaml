@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <v:String x:Key="MainWindow_Menu_Guitars">Гитары</v:String>
+    <v:String x:Key="MainWindow_Menu_AdminTools">Инструменты админа</v:String>
+
+    <!-- ProductsWindow -->
+    <v:String x:Key="Products_Search">Поиск</v:String>
+    <v:String x:Key="Products_Price_Header">Цена</v:String>
+    <v:String x:Key="Products_Price_Description">Выберите диапазон цены.</v:String>
+    <v:String x:Key="Products_Price_From">От</v:String>
+    <v:String x:Key="Products_Price_Till">До</v:String>
+    <v:String x:Key="Products_Category_Header">Категории</v:String>
+    <v:String x:Key="Products_Category_Description">Выберите тип гитары, который вам нравится.</v:String>
+    <v:String x:Key="Products_Brand_Header">Производитель</v:String>
+    <v:String x:Key="Products_Brand_Description">Выберите вашего любимого производителя.</v:String>
+    <v:String x:Key="Products_Filter">Фильтр</v:String>
+    <v:String x:Key="Products_Refresh">Сброс</v:String>
+    <v:String x:Key="Products_Goods">Товары</v:String>
+
+    <!-- AdminToolsWindow -->
+    <v:String x:Key="AdminTools_Header">Гитарный конструктор</v:String>
+    <v:String x:Key="AdminTools_Title">Название</v:String>
+    <v:String x:Key="AdminTools_Price">Цена</v:String>
+    <v:String x:Key="AdminTools_Category">Категория</v:String>
+    <v:String x:Key="AdminTools_Brand">Производитель</v:String>
+    <v:String x:Key="AdminTools_Create">Создать</v:String>
+
+</ResourceDictionary>

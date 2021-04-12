@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <v:String x:Key="MainWindow_Menu_Guitars">Guitars</v:String>
+    <v:String x:Key="MainWindow_Menu_AdminTools">Admin Tools</v:String>
+
+    <!-- ProductsWindow -->
+    <v:String x:Key="Products_Search">Search</v:String>
+    <v:String x:Key="Products_Price_Header">Price</v:String>
+    <v:String x:Key="Products_Price_Description">Select the price range of the product.</v:String>
+    <v:String x:Key="Products_Price_From">From</v:String>
+    <v:String x:Key="Products_Price_Till">Till</v:String>
+    <v:String x:Key="Products_Category_Header">Category</v:String>
+    <v:String x:Key="Products_Category_Description">Choose the kind of guitar you like.</v:String>
+    <v:String x:Key="Products_Brand_Header">Brand</v:String>
+    <v:String x:Key="Products_Brand_Description">Choose your favorite guitar brand.</v:String>
+    <v:String x:Key="Products_Filter">Filter</v:String>
+    <v:String x:Key="Products_Refresh">Refresh</v:String>
+    <v:String x:Key="Products_Goods">Goods</v:String>
+
+    <!-- AdminToolsWindow -->
+    <v:String x:Key="AdminTools_Header">Guitar constructor</v:String>
+    <v:String x:Key="AdminTools_Title">Title</v:String>
+    <v:String x:Key="AdminTools_Price">Price</v:String>
+    <v:String x:Key="AdminTools_Category">Category</v:String>
+    <v:String x:Key="AdminTools_Brand">Brand</v:String>
+    <v:String x:Key="AdminTools_Create">Create</v:String>
+</ResourceDictionary>

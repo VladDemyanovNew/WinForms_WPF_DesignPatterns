@@ -7,7 +7,8 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:control = "clr-namespace:VDemyanov.Shop.ShopWPF.Themes" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -18,7 +19,7 @@
         <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3"
                       HorizontalAlignment="Center" VerticalAlignment="Stretch" />
 
-        <Grid Grid.Column="0" Background="#FFFCFAFA">
+        <Grid Grid.Column="0" Style="{DynamicResource FilterSectionStyle}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="46*"/>
                 <RowDefinition Height="544*"/>
@@ -30,7 +31,7 @@
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <TextBox Padding="50, 3, 3, 3" Foreground="#FF454545"  materialDesign:HintAssist.Hint="Search" Grid.ColumnSpan="3" Background="WhiteSmoke" FontSize="25" TextAlignment="Left" />
+                <TextBox Text="{Binding GuitarSearchText, UpdateSourceTrigger=PropertyChanged}"  Padding="50, 3, 3, 3" Foreground="#FF454545"  materialDesign:HintAssist.Hint="{DynamicResource Products_Search}" Grid.ColumnSpan="3" Background="WhiteSmoke" FontSize="25" TextAlignment="Left" />
                 <materialDesign:PackIcon Kind="Magnify" Foreground="Gray" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
 
@@ -38,13 +39,13 @@
                 <StackPanel Orientation="Vertical">
                     <Expander Background="#FFFCFAFA">
                         <Expander.Header>
-                            <TextBlock FontSize="15" FontWeight="Bold" Text="Price"/>
+                            <TextBlock FontSize="15" FontWeight="Bold" Text="{DynamicResource Products_Price_Header}"/>
                         </Expander.Header>
                         <StackPanel  Margin="25,0,10,10">
-                            <TextBlock Padding="0, 0, 0, 0" Foreground="#FF3F3F3F" Text="Select the price range of the product." />
+                            <TextBlock Padding="0, 0, 0, 0" Foreground="#FF3F3F3F" Text="{DynamicResource Products_Price_Description}" />
                             <UniformGrid VerticalAlignment="Bottom" Rows="2" Columns="2">
-                                <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="From"/>
-                                <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Till"/>
+                                <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{DynamicResource Products_Price_From}"/>
+                                <TextBlock Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{DynamicResource Products_Price_Till}"/>
                                 <TextBox Foreground="Gray" BorderThickness="1,1,0,1"  />
                                 <TextBox Foreground="Gray" BorderThickness="1"  />
                             </UniformGrid>
@@ -52,10 +53,10 @@
                     </Expander>
                     <Expander Background="#FFFCFAFA">
                         <Expander.Header>
-                            <TextBlock FontSize="15" FontWeight="Bold" Text="Category"/>
+                            <TextBlock FontSize="15" FontWeight="Bold" Text="{DynamicResource Products_Category_Header}"/>
                         </Expander.Header>
                         <StackPanel  Margin="25,0,10,10">
-                            <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="Choose the kind of guitar you like." />
+                            <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="{DynamicResource Products_Category_Description}" />
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Acoustic Guitars"/>
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Electric Guitars"/>
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Classical | Nylon Guitars"/>
@@ -63,41 +64,41 @@
                     </Expander>
                     <Expander Background="#FFFCFAFA">
                         <Expander.Header>
-                            <TextBlock FontSize="15" FontWeight="Bold" Text="Brand"/>
+                            <TextBlock FontSize="15" FontWeight="Bold" Text="{DynamicResource Products_Brand_Header}"/>
                         </Expander.Header>
                         <StackPanel  Margin="25,0,0,10">
-                            <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="Choose your favorite guitar brand." />
-                            <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Acoustic Guitars"/>
+                            <TextBlock Padding="0, 0, 0, 10" Foreground="#FF3F3F3F" Text="{DynamicResource Products_Brand_Description}" />
+                            <CheckBox x:Name="checkBoxTestsDataTrigger" Margin="10,0,0,0" Foreground="Gray" Content="Acoustic Guitars"/>
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Electric Guitars"/>
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Classical | Nylon Guitars"/>
                         </StackPanel>
                     </Expander>
+                    <!--<control:Product Padding="20" Width="100" Height="100" Background="red" BorderThickness="2" BorderBrush="Black"/>-->
                 </StackPanel>
             </ScrollViewer>
 
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="2">
-                <Button Width="100" BorderBrush="{x:Null}">
+                <Button Template="{DynamicResource ButtonBaseControlTemplate1}" Style="{DynamicResource DataTriggerTesting}" Width="100" BorderBrush="{x:Null}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Filter" />
+                        <TextBlock Text="{DynamicResource Products_Filter}" />
                         <materialDesign:PackIcon Kind="Filter" Height="20" Width="20" Foreground="White"/>
                     </StackPanel>
                 </Button>
-                <Button Margin="10,0,0,0" Width="100" BorderBrush="{x:Null}">
+                <Button Style="{DynamicResource MultiTriggerTesting}" Template="{DynamicResource ButtonBaseControlTemplate1}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Refresh" />
-                        <materialDesign:PackIcon Kind="Refresh" Height="20" Width="20" Foreground="White"/>
+                        <TextBlock Text="{DynamicResource Products_Refresh}" />
+                        <materialDesign:PackIcon Kind="Refresh" Height="20" Width="20"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
-            
-            
+
         </Grid>
 
         <ScrollViewer Grid.Column="3">
             <StackPanel>
-                <TextBlock Padding="0,5" FontWeight="DemiBold" Text="Goods" FontSize="20" HorizontalAlignment="Center" />
+                <TextBlock Padding="0,5" FontWeight="DemiBold" FontSize="20" HorizontalAlignment="Center" Cursor="Hand" Text="{DynamicResource Products_Goods}"/>
                 <StackPanel>
-                    <ItemsControl x:Name="guitarList" ItemsSource="{Binding Path=Guitars}">
+                    <ItemsControl x:Name="guitarList" ItemsSource="{Binding Path=SelectedGuitars}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Border BorderThickness="1" BorderBrush="#FF4F4F4F"  Background="White" Margin="20">
@@ -115,7 +116,8 @@
                                                 <TextBlock Padding="0,0,0,2" Foreground="#FF5A5A5A" Text="{Binding Brand}" />
                                                 <TextBlock Padding="0,0,0,2" Foreground="Gray" Text="{Binding Category}" />
                                                 <TextBlock Padding="0,0,0,2" Foreground="Gray" Text="{Binding Title}" />
-                                                <Button Padding="5" BorderBrush="{x:Null}">
+
+                                                <Button Style="{StaticResource ButtonBuy}">
                                                     <StackPanel  Orientation="Horizontal">
                                                         <TextBlock Padding="0,0,5,0" FontSize="12" Text="{Binding Price}" />
                                                         <materialDesign:PackIcon VerticalAlignment="Center" Kind="Cart" Height="15" Width="15" Foreground="White"/>

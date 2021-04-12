@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Windows.Resources;
 using System.Windows.Shapes;
 using VDemyanov.Shop.ShopWPF.ViewModels;
 using VDemyanov.Shop.ShopWPF.Views.ViewInfrastructure;
@@ -26,6 +27,7 @@ namespace VDemyanov.Shop.ShopWPF
         public MainWindow()
         {
             InitializeComponent();
+            
             this.Loaded += MainWindow_Loaded;
         }
 
