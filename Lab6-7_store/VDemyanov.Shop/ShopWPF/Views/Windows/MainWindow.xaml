@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:VDemyanov.Shop.ShopWPF.ViewModels"
         xmlns:local="clr-namespace:VDemyanov.Shop.ShopWPF"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:CustomControls="clr-namespace:VDemyanov.Shop.WPFCustomControls;assembly=VDemyanov.Shop.WPFCustomControls"
         mc:Ignorable="d"
         Height="700" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" BorderThickness="1">
     <!--<Window.DataContext>
@@ -20,7 +20,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="0,3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
+
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0,1*"></RowDefinition>
@@ -75,7 +75,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            
+
             <!--
             <ListView VerticalAlignment="Center" FontSize="20">
                 <ListViewItem>
@@ -92,12 +92,13 @@
                 </ListViewItem>
             </ListView>
             -->
-            
+
             <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <Button Command="{Binding ChangeThemeCommand}"  Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
                         <materialDesign:PackIcon Kind="ThemeLightDark" Height="25" Width="25" Foreground="White"/>
                     </Button>
+                    <CustomControls:CustomCheckBox Cursor="Hand" Command="{Binding ChangeThemeCommand}" Margin="10,0,0,0" Width="40"/>
                 </StackPanel>
             </Grid>
         </Grid>

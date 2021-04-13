@@ -69,7 +69,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Themes\Product.cs" />
     <Compile Include="ViewModels\AdminToolsViewModel.cs" />
     <Compile Include="ViewModels\ProductsViewModel.cs" />
     <Compile Include="Views\ViewInfrastructure\IMainWindowsCodeBehind.cs" />
@@ -107,10 +106,6 @@
     <Page Include="Resources\Themes\Light.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Windows\AdminTools.xaml">
       <SubType>Designer</SubType>
@@ -169,7 +164,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\CustomControls\" />
+    <ProjectReference Include="..\WPFCustomControls\WPFCustomControls.csproj">
+      <Project>{54d389d8-91f9-4e17-9e32-38e7d9f646eb}</Project>
+      <Name>WPFCustomControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Guitar1.jpg" />

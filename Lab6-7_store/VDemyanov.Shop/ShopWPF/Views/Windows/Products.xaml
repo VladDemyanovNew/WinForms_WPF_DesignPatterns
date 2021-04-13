@@ -8,7 +8,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:control = "clr-namespace:VDemyanov.Shop.ShopWPF.Themes" >
+             xmlns:customControls="clr-namespace:VDemyanov.Shop.WPFCustomControls;assembly=VDemyanov.Shop.WPFCustomControls">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -73,7 +73,6 @@
                             <CheckBox Margin="10,0,0,0" Foreground="Gray" Content="Classical | Nylon Guitars"/>
                         </StackPanel>
                     </Expander>
-                    <!--<control:Product Padding="20" Width="100" Height="100" Background="red" BorderThickness="2" BorderBrush="Black"/>-->
                 </StackPanel>
             </ScrollViewer>
 
