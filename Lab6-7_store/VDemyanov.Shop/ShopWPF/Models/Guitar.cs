@@ -16,7 +16,7 @@ namespace VDemyanov.Shop.ShopWPF.Models
         public string ImagePath { get; set; }
 
         public Guitar()
-        {
+        {   
 
         }
 

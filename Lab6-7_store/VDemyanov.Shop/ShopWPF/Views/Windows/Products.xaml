@@ -31,7 +31,11 @@
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <TextBox Text="{Binding GuitarSearchText, UpdateSourceTrigger=PropertyChanged}"  Padding="50, 3, 3, 3" Foreground="#FF454545"  materialDesign:HintAssist.Hint="{DynamicResource Products_Search}" Grid.ColumnSpan="3" Background="WhiteSmoke" FontSize="25" TextAlignment="Left" />
+                <TextBox Text="{Binding GuitarSearchText, UpdateSourceTrigger=PropertyChanged}"
+                         Padding="50, 3, 3, 3" Foreground="#FF454545"
+                         materialDesign:HintAssist.Hint="{DynamicResource Products_Search}"
+                         Grid.ColumnSpan="3" Background="WhiteSmoke" FontSize="25"
+                         TextAlignment="Left" />
                 <materialDesign:PackIcon Kind="Magnify" Foreground="Gray" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
 

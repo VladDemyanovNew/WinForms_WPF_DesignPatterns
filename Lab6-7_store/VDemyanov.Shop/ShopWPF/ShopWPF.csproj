@@ -69,8 +69,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Dragon.cs" />
     <Compile Include="ViewModels\AdminToolsViewModel.cs" />
     <Compile Include="ViewModels\ProductsViewModel.cs" />
+    <Compile Include="ViewModels\TestViewModel.cs" />
     <Compile Include="Views\ViewInfrastructure\IMainWindowsCodeBehind.cs" />
     <Compile Include="Views\ViewInfrastructure\ViewType.cs" />
     <Compile Include="Views\Windows\AdminTools.xaml.cs">
@@ -78,6 +80,9 @@
     </Compile>
     <Compile Include="Views\Windows\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\TestWindow.xaml.cs">
+      <DependentUpon>TestWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Languages\lang.ru-RU.xaml">
       <SubType>Designer</SubType>
@@ -130,6 +135,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Windows\Products.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\TestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

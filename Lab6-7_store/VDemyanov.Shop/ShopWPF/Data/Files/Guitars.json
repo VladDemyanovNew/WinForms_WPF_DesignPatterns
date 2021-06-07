@@ -70,5 +70,29 @@
     "Category": null,
     "Brand": null,
     "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar4.jpg"
+  },
+  {
+    "Id": 10,
+    "Title": "",
+    "Price": 0.0,
+    "Category": null,
+    "Brand": null,
+    "ImagePath": null
+  },
+  {
+    "Id": 11,
+    "Title": "fgdfg",
+    "Price": 123.0,
+    "Category": "sdfsd",
+    "Brand": "sdfsdf",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar4.jpg"
+  },
+  {
+    "Id": 12,
+    "Title": "testlast",
+    "Price": 123344.0,
+    "Category": "afsdf",
+    "Brand": "sdfsdf",
+    "ImagePath": "D:\\University\\FourthSem\\OOP\\Labs\\WinForms_WPF_DesignPatterns\\Lab6-7_store\\VDemyanov.Shop\\ShopWPF\\Images\\Guitar2.jpg"
   }
 ]
